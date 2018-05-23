@@ -1,9 +1,13 @@
 {
   "name": "yoshi",
-  "version": "2.4.0",
+  "version": "2.6.1",
   "main": "./src/index.js",
   "bin": {
     "yoshi": "./bin/yoshi.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wix-private/yoshi"
   },
   "scripts": {
     "test": "mocha './test/{,!(fixtures)/**/}/*.spec.js'",
@@ -17,7 +21,7 @@
     "babel-loader": "~7.1.1",
     "babel-plugin-transform-es2015-modules-commonjs": "~6.24.1",
     "babel-polyfill": "~6.23.0",
-    "babel-preset-wix": "~1.0.0",
+    "babel-preset-wix": "^2.0.0",
     "babel-preset-yoshi": "^2.4.0",
     "babel-register": "~6.24.1",
     "caporal": "~0.9.0",
@@ -104,7 +108,7 @@
     "webpack": "^4.1.1",
     "webpack-bundle-analyzer": "~2.8.3",
     "webpack-dev-middleware": "~2.0.5",
-    "webpack-hot-client": "^2.2.0",
+    "webpack-hot-client": "^3.0.0",
     "wix-tpa-style-loader": "~1.0.8",
     "wnpm-ci": "~6.2.54",
     "xml2js": "~0.4.19",
