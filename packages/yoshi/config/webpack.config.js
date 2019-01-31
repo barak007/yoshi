@@ -652,6 +652,11 @@ function createClientWebpackConfig({
         outputCSS: stylableSeparateCss,
         filename: '[name].stylable.bundle.css',
         includeCSSInJS: !stylableSeparateCss,
+        runtimeMode: 'shared',
+        globalRuntimeId: '__stylable_yoshi__',
+        generate: {
+            runtimeStylesheetId: 'namespace'
+        },
         optimize: { classNameOptimizations: false, shortNamespaces: false },
       }),
 
