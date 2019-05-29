@@ -45,6 +45,12 @@ const {
   getProjectArtifactId,
   createBabelConfig,
 } = require('yoshi-helpers/utils');
+
+if(!StylableWebpackPlugin) {
+  console.log('WTF?')
+  StylableWebpackPlugin = require('@stylable/webpack-plugin')
+}
+
 const { addEntry, overrideRules } = require('../src/webpack-utils');
 
 const reScript = /\.js?$/;
