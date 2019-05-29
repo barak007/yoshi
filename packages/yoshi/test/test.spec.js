@@ -292,10 +292,10 @@ describe('Aggregator: Test', () => {
             `,
         '__tests__/styles.js': `
               it('pass stylable', () => {
-                const style = require('./main.st.css').default;
+                const {style, classes} = require('./main.st.css');
 
-                expect(style.someclass.indexOf('someclass') > -1).toBe(true);
-                expect(style('root').className.indexOf('root') > -1).toBe(true);
+                expect(classes.someclass.indexOf('someclass') > -1).toBe(true);
+                expect(style(classes.root).indexOf('root') > -1).toBe(true);
               });
             `,
         '__tests__/separate-styles.js': `
@@ -949,11 +949,11 @@ describe('Aggregator: Test', () => {
                 }`,
               'src/style.spec.js': `
                 const assert = require('assert');
-                const style = require('./main.st.css').default;
+                const {style, classes} = require('./main.st.css');
 
                 it('pass', () => {
-                  assert.equal(style.someclass.indexOf('someclass') > -1, true);
-                  assert.equal(style('root').className.indexOf('root') > -1, true);
+                  assert.equal(classes.someclass.indexOf('someclass') > -1, true);
+                  assert.equal(style(classes.root).indexOf('root') > -1, true);
                 })`,
               'package.json': fx.packageJson(),
             })

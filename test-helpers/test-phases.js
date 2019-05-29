@@ -32,7 +32,7 @@ class Test {
     // remove current tmp/node_modules directory
     rimraf.sync(tmpNodeModules);
     // creates a symlink from tmp/node_modules to yoshi/node_modules
-    fs.symlinkSync(yoshiNodeModulesPath, tmpNodeModules);
+    fs.symlinkSync(yoshiNodeModulesPath, tmpNodeModules, 'junction');
   }
 
   setup(tree, hooks = []) {
