@@ -7,7 +7,7 @@ const jestProjectConfig = projectConfig.jestConfig;
 const config = merge(jestProjectConfig, {
   transform: {
     '\\.jsx?$': require.resolve('./jest-transformer'),
-    '\\.st.css?$': require.resolve('@stylable/jest'),
+    '\\.st\\.css?$': require.resolve('@stylable/jest'),
     '\\.svg$': require.resolve('./svg-transformer.js'),
   },
 });

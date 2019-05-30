@@ -68,7 +68,7 @@ describe('Aggregator: Build', () => {
             'src/styles/my-file.global.scss': `.x {.y {color: blue;}}`,
             'src/styles/my-file-less.global.less': `.q {.w {color: blue;}}`,
             'src/styles/my-file.scss': `.a {.b {color: blue;}}`,
-            'src/styles/my-file.st.css': `.root {.stylableClass {color: pink;}}`,
+            'src/styles/my-file.st.css': `.root {} .stylableClass {color: pink;}`,
             'src/app3.js': `require('./styles/file-with-url.css');`,
             'src/styles/file-with-url.css': `body {
               background: url('../assets/image.jpg');
@@ -523,7 +523,7 @@ describe('Aggregator: Build', () => {
         .setup({
           'src/a.js': `export default "I'm a module!"; import './a.scss'; import './a.st.css'; require('lodash/map')`,
           'src/a.scss': `.x {.y {user-select: none;}}`,
-          'src/a.st.css': `.root {.stylableClass {color: pink;}}`,
+          'src/a.st.css': `.root {} .stylableClass {color: pink;}`,
           'src/assets/file': '1',
           'src/something.js': fx.angularJs(),
           'something/something.js': fx.angularJs(),
@@ -812,7 +812,7 @@ describe('Aggregator: Build', () => {
           'src/client.ts': `console.log("hello"); import './styles/style.scss'; import './styles/stylableFile.st.css'`,
           'src/a.ts': 'export default "I\'m a module!";',
           'src/styles/style.scss': `.a {.b {color: red;}}`,
-          'src/styles/stylableFile.st.css': `.root {.stylableClass {color: pink;}}`,
+          'src/styles/stylableFile.st.css': `.root {} .stylableClass {color: pink;}`,
           'src/something.ts': fx.angularJs(),
           'something/something.js': fx.angularJs(),
           'something.js': fx.angularJs(),
