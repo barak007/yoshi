@@ -11,7 +11,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-let { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
+const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
 const { resolveNamespaceFactory } = require('@stylable/node');
 const TpaStyleWebpackPlugin = require('tpa-style-webpack-plugin');
 const RtlCssPlugin = require('rtlcss-webpack-plugin');
@@ -45,11 +45,6 @@ const {
   getProjectArtifactId,
   createBabelConfig,
 } = require('yoshi-helpers/utils');
-
-if (!StylableWebpackPlugin) {
-  console.log('WTF?');
-  StylableWebpackPlugin = require('@stylable/webpack-plugin');
-}
 
 const { addEntry, overrideRules } = require('../src/webpack-utils');
 
