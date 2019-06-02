@@ -5,9 +5,8 @@ import {
   withExperiments,
 } from '@wix/wix-experiments-react';
 import { TPAComponentsProvider } from 'wix-ui-tpa/TPAComponentsConfig';
-import { Button } from 'wix-ui-tpa/Button';
 import i18n from '../../config/i18n';
-import styles from './App.st.css';
+import { style, classes} from './App.st.css';
 
 export default class AppRoot extends React.Component {
   render() {
@@ -26,15 +25,15 @@ export default class AppRoot extends React.Component {
 }
 
 export const App = withExperiments(
-  translate()(({ name, t, ...rest }) => {
+  translate()(({ name, t, className }) => {
     return (
-      <div {...styles('root', {}, rest)}>
-        <div className={styles.header}>
+      <div className={style(classes.root, className)}>
+        <div className={classes.header}>
           <h2>
             {t('app.hello')} {name}!
           </h2>
         </div>
-        <Button className={styles.mainButton}>click me</Button>
+        <button className={classes.mainButton}>click me</button>
       </div>
     );
   }),

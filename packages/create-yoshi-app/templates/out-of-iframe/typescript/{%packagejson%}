@@ -46,8 +46,7 @@
     "prop-types": "~15.6.0",
     "react": "~16.6.2",
     "react-dom": "~16.6.2",
-    "react-i18next": "^7.11.0",
-    "wix-ui-tpa": "^1.0.123"
+    "react-i18next": "^7.11.0"
   },
   "lint-staged": {
     "*.{js,scss,less}": "yoshi lint"

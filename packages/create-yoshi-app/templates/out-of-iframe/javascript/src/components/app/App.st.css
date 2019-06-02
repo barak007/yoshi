@@ -1,7 +1,7 @@
-:import {
+/* :import {
   -st-from: 'wix-ui-tpa/dist/src/components/Button/Button.st.css';
   -st-default: Button;
-}
+} */
 
 .root {
   --backgroundColor: "color(color-2)";
@@ -17,10 +17,11 @@
 }
 
 .mainButton {
-  -st-extends: Button;
+  /* -st-extends: Button;
   -st-mixin: Button(
     MainBackgroundColor '"--buttonBackgroundColor"'
-  );
+  ); */
+  background-color: "--buttonBackgroundColor";
   padding: 0 20px;
   height: 30px;
   margin-top: 20px;

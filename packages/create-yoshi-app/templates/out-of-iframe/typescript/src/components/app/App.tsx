@@ -33,7 +33,7 @@ export default class AppRoot extends React.Component<IAppRootProps, {}> {
 }
 
 export const App = withExperiments<any>(
-  translate()(({ name, t, className, ...rest }) => {
+  translate()(({ name, t, className }) => {
     return (
       <div className={style(classes.root, className)}>
         <div className={classes.header}>
