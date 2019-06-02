@@ -4,9 +4,9 @@ import {
   ExperimentsProvider,
   withExperiments,
 } from '@wix/wix-experiments-react';
-import { Button } from 'wix-ui-tpa/Button';
+// import { Button } from 'wix-ui-tpa/Button';
 import i18n from '../../config/i18n';
-import styles from './App.st.css';
+import { style, classes } from './App.st.css';
 
 // import { IHostProps } from '@wix/native-components-infra/dist/src/types/types';
 import { ExperimentsBag } from '@wix/wix-experiments';
@@ -33,15 +33,16 @@ export default class AppRoot extends React.Component<IAppRootProps, {}> {
 }
 
 export const App = withExperiments<any>(
-  translate()(({ name, t, ...rest }) => {
+  translate()(({ name, t, className, ...rest }) => {
     return (
-      <div {...styles('root', {}, rest)}>
-        <div className={styles.header}>
+      <div className={style(classes.root, className)}>
+        <div className={classes.header}>
           <h2>
             {t('app.hello')} {name}!
           </h2>
         </div>
-        <Button className={styles.mainButton}>click me</Button>
+        <button className={classes.mainButton}></button>
+        {/* <Button className={styles.mainButton}>click me</Button> */}
       </div>
     );
   }),
