@@ -300,9 +300,9 @@ describe('Aggregator: Test', () => {
             `,
         '__tests__/separate-styles.js': `
                 it('pass styles from node_modules', () => {
-                  const style = require('pkg/main.st.css').default;
-                  expect(style.someclass.indexOf('someclass') > -1).toBe(true);
-                  expect(style('root').className.indexOf('root') > -1).toBe(true);
+                  const {style, classes} = require('pkg/main.st.css');
+                  expect(classes.someclass.indexOf('someclass') > -1).toBe(true);
+                  expect(style(classes.root).indexOf('root') > -1).toBe(true);
                 });`,
         '__tests__/main.st.css': `
               .someclass {
