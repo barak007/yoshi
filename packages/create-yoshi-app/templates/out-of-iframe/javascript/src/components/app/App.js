@@ -6,7 +6,7 @@ import {
 } from '@wix/wix-experiments-react';
 import { TPAComponentsProvider } from 'wix-ui-tpa/TPAComponentsConfig';
 import i18n from '../../config/i18n';
-import { style, classes} from './App.st.css';
+import { style, classes } from './App.st.css';
 
 export default class AppRoot extends React.Component {
   render() {
