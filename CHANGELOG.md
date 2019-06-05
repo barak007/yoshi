@@ -1,5 +1,45 @@
 # Changelog
 
+## 4.8.0 (2019-06-05)
+
+#### :rocket: New Feature
+
+- `create-yoshi-app`
+  - [#1362](https://github.com/wix/yoshi/pull/1362) Open both `editor` and `viewer` + move to `js` config ([@ranyitz](https://github.com/ranyitz))
+  - [#1357](https://github.com/wix/yoshi/pull/1357) Add settings panel `e2e` test in `ooi` templates ([@ranyitz](https://github.com/ranyitz))
+- `yoshi`
+  - [#1353](https://github.com/wix/yoshi/pull/1353) Allow hmr over production site (`.wixsite.com`) ([@deanshub](https://github.com/deanshub))
+- `yoshi-config`, `yoshi`
+  - [#1351](https://github.com/wix/yoshi/pull/1351) Support `startUrl` option and accept multiple urls for `--url` flag ([@ranyitz](https://github.com/ranyitz))
+
+#### :nail_care: Polish
+
+- `create-yoshi-app`
+  - [#1356](https://github.com/wix/yoshi/pull/1356) Remove `organization` option ([@AndriiTsarenko](https://github.com/AndriiTsarenko))
+  - [#1358](https://github.com/wix/yoshi/pull/1358) Improvements to the server template ([@hugebdu](https://github.com/hugebdu))
+
+#### :memo: Documentation
+
+- [#1361](https://github.com/wix/yoshi/pull/1361) Remove Hebrew talks links from Yoshi's site ([@ranyitz](https://github.com/ranyitz))
+
+#### :house: Internal
+
+- `create-yoshi-app`
+  - [#1363](https://github.com/wix/yoshi/pull/1363) Improve symlink modules by removing the existing modules before ([@ranyitz](https://github.com/ranyitz))
+- Other
+  - [#1359](https://github.com/wix/yoshi/pull/1359) Move Yoshi test directory to be an inner directory ([@ranyitz](https://github.com/ranyitz))
+
+## 4.7.3 (2019-06-03)
+
+#### :nail_care: Polish
+
+- `yoshi-config`
+  - [#1349](https://github.com/wix/yoshi/pull/1349) Add `packages` directory to the base glob pattern ([@ronami](https://github.com/ronami))
+- `jest-yoshi-preset`, `yoshi-config`, `yoshi-helpers`, `yoshi`
+  - [#1348](https://github.com/wix/yoshi/pull/1348) Use multi glob patterns instead of a glob set ([@ronami](https://github.com/ronami))
+- `create-yoshi-app`
+  - [#1346](https://github.com/wix/yoshi/pull/1346) Bump Axios to v0.19.0 ([@ronami](https://github.com/ronami))
+
 ## 4.7.2 (2019-05-29)
 
 #### :rocket: New Feature
